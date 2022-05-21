@@ -1,0 +1,121 @@
+﻿@model Web4dotnet.Models.QLLuat
+
+@{
+    ViewBag.Title = "Xóa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn chắc chắn muốn xóa?</h3>
+<div>
+    <h4>QLLuat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Chuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NDChuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NDChuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Muc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Muc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NDMuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NDMuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NDDieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NDDieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NDKhoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NDKhoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MucPhatduoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MucPhatduoi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MucPhattren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MucPhattren)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QAQC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QAQC)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về trang chủ", "Index")
+        </div>
+    }
+</div>

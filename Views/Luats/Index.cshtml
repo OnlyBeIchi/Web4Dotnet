@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Web4dotnet.Models.QLLuat>
+
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Trang chủ</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Chuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NDChuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Muc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NDMuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NDDieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Khoan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NDKhoan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MucPhatduoi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MucPhattren)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QAQC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Chuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NDChuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Muc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NDMuc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NDDieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Khoan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NDKhoan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MucPhatduoi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MucPhattren)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QAQC)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Hiển thị", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
