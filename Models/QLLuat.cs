@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Web4dotnet.Models
 {
@@ -36,9 +37,9 @@ namespace Web4dotnet.Models
         public string MucPhatduoi { set; get; }
         [Display(Name = "Mức phạt trên")]
         public string MucPhattren { set; get; }
-        [Display(Name = "Status")]
+        //[Display(Name = "Status")]
         public string Status { set; get; }
-        [Display(Name = "QAQC")]
+        //[Display(Name = "QAQC")]
         public string QAQC { set; get; }
     }
 
@@ -140,6 +141,8 @@ namespace Web4dotnet.Models
             cmd.Dispose();
             con.Close();
         }
+
+       
 
 
     }
