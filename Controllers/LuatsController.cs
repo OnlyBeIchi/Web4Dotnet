@@ -80,7 +80,5 @@ namespace Web4dotnet.Controllers
             return View(obj.FirstOrDefault());
         }
 
-     
-
     }
 }
