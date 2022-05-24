@@ -33,6 +33,9 @@ namespace Web4dotnet.Models
     partial void InsertLuat(Luat instance);
     partial void UpdateLuat(Luat instance);
     partial void DeleteLuat(Luat instance);
+    partial void InsertUser(User instance);
+    partial void UpdateUser(User instance);
+    partial void DeleteUser(User instance);
     #endregion
 		
 		public MydataDataContext() : 
@@ -70,6 +73,14 @@ namespace Web4dotnet.Models
 			get
 			{
 				return this.GetTable<Luat>();
+			}
+		}
+		
+		public System.Data.Linq.Table<User> Users
+		{
+			get
+			{
+				return this.GetTable<User>();
 			}
 		}
 	}
@@ -399,6 +410,188 @@ namespace Web4dotnet.Models
 					this._QAQC = value;
 					this.SendPropertyChanged("QAQC");
 					this.OnQAQCChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[User]")]
+	public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _TenDangNhap;
+		
+		private string _MatKhau;
+		
+		private string _TenNguoiDung;
+		
+		private System.Nullable<byte> _Quyen;
+		
+		private string _MoTaQuyen;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnTenDangNhapChanging(string value);
+    partial void OnTenDangNhapChanged();
+    partial void OnMatKhauChanging(string value);
+    partial void OnMatKhauChanged();
+    partial void OnTenNguoiDungChanging(string value);
+    partial void OnTenNguoiDungChanged();
+    partial void OnQuyenChanging(System.Nullable<byte> value);
+    partial void OnQuyenChanged();
+    partial void OnMoTaQuyenChanging(string value);
+    partial void OnMoTaQuyenChanged();
+    #endregion
+		
+		public User()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDangNhap", DbType="NVarChar(50)")]
+		public string TenDangNhap
+		{
+			get
+			{
+				return this._TenDangNhap;
+			}
+			set
+			{
+				if ((this._TenDangNhap != value))
+				{
+					this.OnTenDangNhapChanging(value);
+					this.SendPropertyChanging();
+					this._TenDangNhap = value;
+					this.SendPropertyChanged("TenDangNhap");
+					this.OnTenDangNhapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="NVarChar(50)")]
+		public string MatKhau
+		{
+			get
+			{
+				return this._MatKhau;
+			}
+			set
+			{
+				if ((this._MatKhau != value))
+				{
+					this.OnMatKhauChanging(value);
+					this.SendPropertyChanging();
+					this._MatKhau = value;
+					this.SendPropertyChanged("MatKhau");
+					this.OnMatKhauChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenNguoiDung", DbType="NVarChar(50)")]
+		public string TenNguoiDung
+		{
+			get
+			{
+				return this._TenNguoiDung;
+			}
+			set
+			{
+				if ((this._TenNguoiDung != value))
+				{
+					this.OnTenNguoiDungChanging(value);
+					this.SendPropertyChanging();
+					this._TenNguoiDung = value;
+					this.SendPropertyChanged("TenNguoiDung");
+					this.OnTenNguoiDungChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quyen", DbType="TinyInt")]
+		public System.Nullable<byte> Quyen
+		{
+			get
+			{
+				return this._Quyen;
+			}
+			set
+			{
+				if ((this._Quyen != value))
+				{
+					this.OnQuyenChanging(value);
+					this.SendPropertyChanging();
+					this._Quyen = value;
+					this.SendPropertyChanged("Quyen");
+					this.OnQuyenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTaQuyen", DbType="NVarChar(MAX)")]
+		public string MoTaQuyen
+		{
+			get
+			{
+				return this._MoTaQuyen;
+			}
+			set
+			{
+				if ((this._MoTaQuyen != value))
+				{
+					this.OnMoTaQuyenChanging(value);
+					this.SendPropertyChanging();
+					this._MoTaQuyen = value;
+					this.SendPropertyChanged("MoTaQuyen");
+					this.OnMoTaQuyenChanged();
 				}
 			}
 		}
