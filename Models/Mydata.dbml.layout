@@ -8,10 +8,10 @@
         <elementListCompartment Id="cd852050-d8e3-41a3-a443-4a52a096aa68" absoluteBounds="2.0149999999999997, 1.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6ec05faa-2635-4814-a927-cd64e47ef36e" absoluteBounds="5.5, 1.125, 2, 1.9631982421875">
+    <classShape Id="6e1ea584-df12-46b0-a819-3860eb679efa" absoluteBounds="5.375, 1.25, 2, 1.5785953776041666">
       <DataClassMoniker Name="/MydataDataContext/User" />
       <nestedChildShapes>
-        <elementListCompartment Id="fa6bc47a-a31f-4097-9038-ef3c5bf5b5ea" absoluteBounds="5.515, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fd13a617-1179-4edf-8585-834d89a8929a" absoluteBounds="5.39, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

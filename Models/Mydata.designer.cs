@@ -39,7 +39,7 @@ namespace Web4dotnet.Models
     #endregion
 		
 		public MydataDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["QuanlyLuatConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["QuanlyLuatConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -447,11 +447,7 @@ namespace Web4dotnet.Models
 		
 		private string _MatKhau;
 		
-		private string _TenNguoiDung;
-		
-		private System.Nullable<byte> _Quyen;
-		
-		private string _MoTaQuyen;
+		private string _Quyen;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -463,12 +459,8 @@ namespace Web4dotnet.Models
     partial void OnTenDangNhapChanged();
     partial void OnMatKhauChanging(string value);
     partial void OnMatKhauChanged();
-    partial void OnTenNguoiDungChanging(string value);
-    partial void OnTenNguoiDungChanged();
-    partial void OnQuyenChanging(System.Nullable<byte> value);
+    partial void OnQuyenChanging(string value);
     partial void OnQuyenChanged();
-    partial void OnMoTaQuyenChanging(string value);
-    partial void OnMoTaQuyenChanged();
     #endregion
 		
 		public User()
@@ -536,28 +528,8 @@ namespace Web4dotnet.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenNguoiDung", DbType="NVarChar(50)")]
-		public string TenNguoiDung
-		{
-			get
-			{
-				return this._TenNguoiDung;
-			}
-			set
-			{
-				if ((this._TenNguoiDung != value))
-				{
-					this.OnTenNguoiDungChanging(value);
-					this.SendPropertyChanging();
-					this._TenNguoiDung = value;
-					this.SendPropertyChanged("TenNguoiDung");
-					this.OnTenNguoiDungChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quyen", DbType="TinyInt")]
-		public System.Nullable<byte> Quyen
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quyen", DbType="NVarChar(50)")]
+		public string Quyen
 		{
 			get
 			{
@@ -572,26 +544,6 @@ namespace Web4dotnet.Models
 					this._Quyen = value;
 					this.SendPropertyChanged("Quyen");
 					this.OnQuyenChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTaQuyen", DbType="NVarChar(MAX)")]
-		public string MoTaQuyen
-		{
-			get
-			{
-				return this._MoTaQuyen;
-			}
-			set
-			{
-				if ((this._MoTaQuyen != value))
-				{
-					this.OnMoTaQuyenChanging(value);
-					this.SendPropertyChanging();
-					this._MoTaQuyen = value;
-					this.SendPropertyChanged("MoTaQuyen");
-					this.OnMoTaQuyenChanged();
 				}
 			}
 		}
