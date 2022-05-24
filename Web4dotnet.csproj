@@ -170,6 +170,14 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Login\css\popup-box.css" />
+    <Content Include="Views\Login\css\style.css" />
+    <Content Include="Views\Login\images\1.jpg" />
+    <Content Include="Views\Login\images\tick.png" />
+    <Content Include="Views\Login\index.html" />
+    <Content Include="Views\Login\js\jquery.magnific-popup.js" />
+    <Content Include="Views\Login\js\jquery.min.js" />
+    <Content Include="Views\Login\js\modernizr.custom.53451.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
