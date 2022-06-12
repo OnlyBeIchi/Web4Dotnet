@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web4dotnet.Helper;
 using Web4dotnet.Models;
 
 namespace Web4dotnet.Controllers
 {
+    
     public class LuatsController : Controller
     {
+        [AuthorizationFilter]
         // GET: Luats
         public ActionResult Index()
         {
