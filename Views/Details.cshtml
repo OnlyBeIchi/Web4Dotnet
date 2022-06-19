@@ -1,0 +1,138 @@
+﻿@model Web4dotnet.Models.QLLuat
+
+@{
+    ViewBag.Title = "Thông tin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông tin</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Chuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NDChuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NDChuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Muc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Muc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NDMuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NDMuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NDDieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NDDieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NDKhoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NDKhoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MucPhatduoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MucPhatduoi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MucPhattren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MucPhattren)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QAQC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QAQC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Trở về trang chủ", "Index")
+</p>
+<style>
+    a:hover {
+        opacity: 0.5;
+        text-decoration: none;
+    }
+
+    
+    .dl-horizontal dt {
+        float: left;
+        width: 160px;
+        clear: left;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 7px;
+    }
+
+    .dl-horizontal dd {
+        margin-left: 180px;
+        padding: 7px;
+    }
+</style>
